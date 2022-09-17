@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate Video
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
@@ -21,4 +19,4 @@ jobs:
       - name: pwd
         run: pwd
       - name: Execute script
-        run: bash media_script.sh
+        run: bash run.sh
