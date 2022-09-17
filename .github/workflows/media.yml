@@ -14,9 +14,5 @@ jobs:
         with:
           repository: mishra-ankit/media-generator
           token: ${{ secrets.TOKEN }} 
-      - name: ls
-        run: ls
-      - name: pwd
-        run: pwd
       - name: Execute script
         run: bash run.sh
