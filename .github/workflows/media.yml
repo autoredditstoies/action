@@ -10,7 +10,12 @@ jobs:
     name: Generate Video
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: mishra-ankit/media-generator
+          token: ${{ secrets.TOKEN }} 
       - name: ls
         run: ls
       - name: pwd
