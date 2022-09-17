@@ -10,6 +10,6 @@ jobs:
     name: Generate Video
     steps:
       - name: Chmod
-        run: chmod +x media_script.sh
+        run: chmod +x "${GITHUB_WORKSPACE}/.github/media_script.sh"
       - name: Execute script
         run: bash media_script.sh
