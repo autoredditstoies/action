@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate Video
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: mishra-ankit/media-generator
+          token: ${{ secrets.TOKEN }} 
       - name: Chmod
-        run: chmod +x "${GITHUB_WORKSPACE}/.github/media_script.sh"
+        run: chmod +x "media_script.sh"
       - name: Execute script
         run: bash media_script.sh
