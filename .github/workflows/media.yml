@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate Video
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: ls
         run: ls
       - name: pwd
