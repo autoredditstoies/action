@@ -1,0 +1,20 @@
+name: Install package
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '20 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Install package
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: mishra-ankit/npm-counter
+          token: ${{ secrets.TOKEN }} 
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm ci
+      - run: node quick_install.js > /dev/null
