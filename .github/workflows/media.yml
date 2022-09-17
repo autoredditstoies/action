@@ -10,8 +10,8 @@ jobs:
     name: Generate Video
     steps:
       - name: ls
-        run: bash ls
+        run: ls
       - name: pwd
-        run: bash pwd
+        run: pwd
       - name: Execute script
         run: bash media_script.sh
