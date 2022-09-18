@@ -16,3 +16,8 @@ jobs:
           token: ${{ secrets.TOKEN }} 
       - name: Execute script
         run: bash run.sh
+      - name: Commit
+        if: ${{ always() }}
+        uses: stefanzweifel/git-auto-commit-action@v4.8.0
+        with:
+          commit_message: Update history of used
