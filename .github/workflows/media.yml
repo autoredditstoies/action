@@ -13,19 +13,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: main
-      - name: Chmod script
-        run: chmod +x main/media_script.sh
-      - name: CD
-        run: cd main/
-      - name: PWD script
-        run: pwd
-      - name: LS script
-        run: ls main/
-      - name: Steps
+      - name: Script
         run: >
-          pwd;
-          ls;
-          cd main;
+          chmod +x main/media_script.sh;
+          cd main
           ./media_script.sh
-      - name: Execute script
-        run: bash media_script.sh
