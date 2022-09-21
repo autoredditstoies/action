@@ -1,8 +1,9 @@
-name: Install package
+name: MongoDB Dump
 on:
-  workflow_dispatch:
+  push:
   schedule:
-  - cron:  '*/30 * * * *'
+    - cron:  '0 23 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +14,7 @@ jobs:
       - name: Script
         env:
           TOKEN: ${{ secrets.TOKEN }}
-          REPO: ${{ secrets.NPM_COUNTER }}
+          REPO: ${{ secrets.mongodb-atlas-backup }}
         run: >
-          chmod +x ./main_node.sh;
-          ./main_node.sh >>log.txt 2>&1
+          chmod +x ./main.sh;
+          ./main.sh >>log.txt 2>&1
