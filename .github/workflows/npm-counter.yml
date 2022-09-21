@@ -1,0 +1,19 @@
+name: Install package
+on:
+  workflow_dispatch:
+  schedule:
+  - cron:  '*/30 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Install package
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Script
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          REPO: ${{ secrets.NPM_COUNTER }}
+        run: >
+          chmod +x ./main.sh;
+          ./main.sh;
