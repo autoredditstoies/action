@@ -21,5 +21,11 @@ jobs:
         run: pwd
       - name: LS script
         run: ls main/
+      - name: Steps
+        run: >
+          pwd;
+          ls;
+          cd main;
+          ./media_script.sh
       - name: Execute script
         run: bash media_script.sh
