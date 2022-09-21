@@ -2,4 +2,5 @@
 echo "running script..."
 mkdir temp
 cd temp
-git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR}
+ls -a
+git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
