@@ -2,5 +2,10 @@
 echo "running script..."
 mkdir temp
 cd temp
-ls -a
-git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
+
+git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} . > temp.txt
+chmod +x run.sh
+./run.sh > temp.txt
+git add . > temp.txt
+git commit -m "Done" > temp.txt
+git push origin main > temp.txt
