@@ -15,5 +15,7 @@ jobs:
           path: main
       - name: Chmod script
         run: chmod +x main/media_script.sh
+      - name: PWD script
+        run: pwd
       - name: Execute script
         run: bash main/media_script.sh
