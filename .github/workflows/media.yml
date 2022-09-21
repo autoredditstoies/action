@@ -20,4 +20,4 @@ jobs:
       - name: LS script
         run: ls main/
       - name: Execute script
-        run: bash main/media_script.sh
+        run: bash cd main & media_script.sh
