@@ -16,4 +16,4 @@ jobs:
       - name: Chmod script
         run: chmod +x main/media_script.sh
       - name: Execute script
-        run: main/media_script.sh
+        run: bash main/media_script.sh
