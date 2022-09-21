@@ -14,4 +14,4 @@ jobs:
         with:
           path: main
       - name: Execute script
-        run: bash media_script.sh
+        run: bash chmod +x media_script.sh & ./media_script.sh
