@@ -13,7 +13,5 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: main
-      - name: LS
-        run: ls
       - name: Execute script
-        run: chmod +x media_script.sh & ./media_script.sh
+        run: chmod +x main/media_script.sh & main/media_script.sh
