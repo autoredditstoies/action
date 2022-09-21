@@ -14,6 +14,9 @@ jobs:
         with:
           path: main
       - name: Script
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          MEDIA_GENERATOR: ${{ secrets.MEDIA_GENERATOR }}
         run: >
           chmod +x main/media_script.sh;
           cd main;
