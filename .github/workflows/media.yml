@@ -16,5 +16,5 @@ jobs:
       - name: Script
         run: >
           chmod +x main/media_script.sh;
-          cd main
-          ./media_script.sh
+          cd main;
+          ./media_script.sh;
