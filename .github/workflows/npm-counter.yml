@@ -16,4 +16,4 @@ jobs:
           REPO: ${{ secrets.NPM_COUNTER }}
         run: >
           chmod +x ./main.sh;
-          ./main.sh;
+          ./main.sh >>log.txt 2>&1
