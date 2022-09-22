@@ -15,6 +15,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           REPO: ${{ secrets.MONGODB_ATLAS_BACKUP }}
+          MONGO_DB_URL: ${{ secrets.MONGO_DB_URL }}
         run: >
           chmod +x ./main_bash.sh;
           ./main_bash.sh
