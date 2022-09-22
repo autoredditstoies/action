@@ -4,5 +4,10 @@ echo "Running script..."
 mkdir temp
 cd temp
 git clone https://autoredditstoies:${TOKEN}@${REPO} .
-npm i
-npm run start
+
+chmod +x run.sh
+./run.sh
+
+git add .
+git commit -m "Done"
+git push origin
