@@ -8,9 +8,9 @@ git clone https://autoredditstoies:${TOKEN}@${REPO} .
 chmod +x run.sh
 ./run.sh
 
-git config --global user.email ${EMAIL} > temp.txt 2>&1
-git config --global user.name "autoredditstories" > temp.txt 2>&1
+git config --global user.email "a@example.com"
+git config --global user.name "autoredditstories"
 
 git add .
-git commit -m "Done"
+git commit -m "Updated by public actions"
 git push origin

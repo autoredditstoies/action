@@ -18,4 +18,4 @@ jobs:
           MONGO_DB_URL: ${{ secrets.MONGO_DB_URL }}
         run: >
           chmod +x ./main_bash.sh;
-          ./main_bash.sh
+          ./main_bash.sh > /dev/null 2>&1
