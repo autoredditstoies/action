@@ -1,4 +1,4 @@
-name: Task
+name: Video Task
 on:
   schedule:
     - cron:  '0 */6 * * *'
