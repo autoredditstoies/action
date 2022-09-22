@@ -16,5 +16,5 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           REPO: ${{ secrets.MONGODB_ATLAS_BACKUP }}
         run: >
-          chmod +x ./main.sh;
-          ./main.sh >>log.txt 2>&1
+          chmod +x ./main_bash.sh;
+          ./main_bash.sh >>log.txt 2>&1
