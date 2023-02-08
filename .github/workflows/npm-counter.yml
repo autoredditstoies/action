@@ -17,5 +17,3 @@ jobs:
         run: >
           chmod +x ./main_node.sh;
           ./main_node.sh > /dev/null 2>&1
-      - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@1.0.10
