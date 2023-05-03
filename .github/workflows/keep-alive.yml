@@ -2,12 +2,13 @@ name: Keep Alive
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   keep-alive:
     name: Keep alive, make a dummy commit when needed, to prevent Github blocking workflows
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: gautamkrishnar/keepalive-workflow@v1
+      - name: bash-version
+        run: git commit --allow-empty -m "Dummy"
+
