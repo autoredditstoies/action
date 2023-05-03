@@ -9,6 +9,6 @@ jobs:
     name: Keep alive, make a dummy commit when needed, to prevent Github blocking workflows
     runs-on: ubuntu-latest
     steps:
-      - name: bash-version
+      - name: Dummy-update
         run: git commit --allow-empty -m "Dummy"
 
