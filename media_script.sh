@@ -5,7 +5,8 @@ cd temp
 
 git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
 chmod +x run.sh
-./run.sh > log.txt 2>&1
+# ./run.sh > log.txt 2>&1
+./run.sh
 
 git config --global user.email ${EMAIL} > temp.txt 2>&1
 git config --global user.name "autoredditstories" > temp.txt 2>&1
