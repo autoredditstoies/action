@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     name: Keep alive, make a dummy commit when needed, to prevent Github blocking workflows
     steps:
       - name: Checkout repo
