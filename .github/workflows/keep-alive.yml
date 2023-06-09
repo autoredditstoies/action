@@ -9,9 +9,6 @@ jobs:
     name: Keep alive, make a dummy commit when needed, to prevent Github blocking workflows
     runs-on: ubuntu-latest
     steps:
-      - name: Script
-        run: 
-          echo $(date +"%T") > dummy.txt
-          git commit -am "Dummy commit"
-          git push
-
+      - run: echo $(date +"%T") > dummy.txt
+      - run: git commit -am "Dummy commit"
+      - run: git push
