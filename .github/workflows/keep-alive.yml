@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Script
         run: >
-          git commit --allow-empty -m "Dummy commit"
+          echo $(date +"%T") > dummy.txt
+          git commit -am "Dummy commit"
+          git push
 
 
