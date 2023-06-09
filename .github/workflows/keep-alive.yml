@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Script
         run: >
-          echo $(date +"%T") > dummy.txt
-          git commit -am "Dummy commit"
-          git push
+          echo $(date +"%T") > dummy.txt;
+          git commit -am "Dummy commit";
+          git push;
 
 
