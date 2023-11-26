@@ -7,7 +7,7 @@ git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
 
 cd scripts
 chmod +x run2.sh
-./run2.sh > log2.txt 2>&1 || run_status=$?  # Continue even if run.sh fails
+./run2.sh > log2.txt 2>&1
 cd ..
 
 git config --global user.email ${EMAIL} > temp.txt 2>&1
@@ -17,11 +17,4 @@ git pull origin main > temp.txt 2>&1
 git commit -m "Done" > temp.txt 2>&1
 git push origin main > temp.txt 2>&1
 
-echo "${run1_status}"
 echo "logs pushed!!!"
-
-if [ -n "${run1_status}" ] && [ "${run1_status}" -ne 0 ]; then
-    exit ${run1_status}
-fi
-
-exit $run_status
