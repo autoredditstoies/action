@@ -7,7 +7,7 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    name: Generate Video
+    name: Generate Video 1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -18,9 +18,9 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           MEDIA_GENERATOR: ${{ secrets.MEDIA_GENERATOR }}
         run: >
-          chmod +x main/media_script.sh;
+          chmod +x main/media_script_1.sh;
           cd main;
-          ./media_script.sh;
+          ./media_script_1.sh;
   generate2:
     runs-on: ubuntu-latest
     name: Generate Video 2
