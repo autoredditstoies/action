@@ -13,7 +13,7 @@ cd ..
 git config --global user.email ${EMAIL} > temp.txt 2>&1
 git config --global user.name "autoredditstories" > temp.txt 2>&1
 git add . > temp.txt 2>&1
-git status
+git pull origin main > temp.txt 2>&1
 git commit -m "Done" > temp.txt 2>&1
 git push origin main > temp.txt 2>&1
 echo "logs pushed!!!"
