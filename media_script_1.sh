@@ -7,7 +7,7 @@ git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
 
 cd scripts
 chmod +x run1.sh
-./run1.sh > log1.txt 2>&1
+./run1.sh > log1.txt 2>&1 || true  # Continue even if run1.sh fails
 cd ..
 
 git config --global user.email ${EMAIL} > temp.txt 2>&1
