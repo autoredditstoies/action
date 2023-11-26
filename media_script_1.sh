@@ -4,6 +4,7 @@ mkdir temp
 cd temp
 
 git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
+
 chmod +x run.sh
 ./run.sh > log.txt 2>&1
 
