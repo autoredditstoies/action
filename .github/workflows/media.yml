@@ -21,3 +21,35 @@ jobs:
           chmod +x main/media_script.sh;
           cd main;
           ./media_script.sh;
+  generate2:
+    runs-on: ubuntu-latest
+    name: Generate Video 2
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Script
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          MEDIA_GENERATOR: ${{ secrets.MEDIA_GENERATOR }}
+        run: >
+          chmod +x main/media_script_2.sh;
+          cd main;
+          ./media_script_2.sh;
+  generate3:
+    runs-on: ubuntu-latest
+    name: Generate Video 3
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Script
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          MEDIA_GENERATOR: ${{ secrets.MEDIA_GENERATOR }}
+        run: >
+          chmod +x main/media_script_3.sh;
+          cd main;
+          ./media_script_3.sh;
