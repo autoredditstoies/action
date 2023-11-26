@@ -7,7 +7,7 @@ git clone https://autoredditstoies:${TOKEN}@${MEDIA_GENERATOR} .
 
 cd scripts
 chmod +x run2.sh
-./run2.sh > log.txt 2>&1
+./run2.sh > log2.txt 2>&1
 cd ..
 
 git config --global user.email ${EMAIL} > temp.txt 2>&1
