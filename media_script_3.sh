@@ -16,6 +16,10 @@ git add . > temp.txt 2>&1
 git pull origin main > temp.txt 2>&1
 git commit -m "Done" > temp.txt 2>&1
 git push origin main > temp.txt 2>&1
+
+echo "${run1_status}"
 echo "logs pushed!!!"
 
-exit $run_status
+if [ -n "${run1_status}" ] && [ "${run1_status}" -ne 0 ]; then
+    exit ${run1_status}
+fi
